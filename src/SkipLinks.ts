@@ -1,14 +1,9 @@
-import { html, css, LitElement } from 'lit';
+import { html, LitElement } from 'lit';
 import { property } from 'lit/decorators.js';
+import { skipLinksStyles } from './skip-links.styles.js';
 
 export class SkipLinks extends LitElement {
-  static styles = css`
-    :host {
-      display: block;
-      padding: 25px;
-      color: var(--skip-links-text-color, #000);
-    }
-  `;
+  static styles = [ skipLinksStyles ];
 
   @property({ type: String }) title = 'Hey there';
 
