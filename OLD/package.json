@@ -1,7 +1,9 @@
 {
   "name": "skip-links",
-  "version": "0.0.1",
-  "description": "A web component to provide skip links to any page and improve the page's accessibility",
+  "description": "Webcomponent skip-links following open-wc recommendations",
+  "license": "MIT",
+  "author": "skip-links",
+  "version": "0.0.0",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
@@ -18,19 +20,9 @@
     "test": "tsc && wtr --coverage",
     "test:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wtr --watch\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/boguz/skip-links.git"
+  "dependencies": {
+    "lit": "^2.0.2"
   },
-  "keywords": [
-    "accessibility"
-  ],
-  "author": "LuisPato",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/boguz/skip-links/issues"
-  },
-  "homepage": "https://github.com/boguz/skip-links#readme",
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@open-wc/eslint-config": "^4.3.0",
@@ -58,7 +50,6 @@
     "plugins": [
       "@typescript-eslint"
     ],
-    "ignorePatterns": ["/OLD"],
     "rules": {
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": [
@@ -71,9 +62,7 @@
         {
           "ignorePackages": true
         }
-      ],
-      "class-methods-use-this": "off",
-      "no-undef": "off"
+      ]
     }
   },
   "prettier": {

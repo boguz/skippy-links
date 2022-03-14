@@ -1,65 +1,95 @@
-import { html, LitElement } from 'lit';
-import { property } from 'lit/decorators.js';
-import { skipLinksStyles } from './skip-links.styles.js';
 import { Target } from './types.js';
+import { skipLinksStyles } from './skip-links.styles.js';
 
-export class SkipLinks extends LitElement {
-  static styles = [ skipLinksStyles ];
+export class SkipLinks extends HTMLElement {
+  private _targets: Target[];
 
-  private _skipLinksLabelAttributeName = 'skip-links-label';
-  
-  @property({ type: Boolean, reflect: true, attribute: 'nolinks' }) _noLinks: boolean = false;
-  @property({ type: Array }) _targets: Target[] = [];
+  private _shadow: ShadowRoot;
+
+  private readonly _skipLinksLabelAttributeName: string;
+
+  private readonly _emptyAttribute: string;
+
+  constructor() {
+    super();
+
+    this._targets = [];
+    this._shadow = this.attachShadow({ mode: 'open' });
+    this._skipLinksLabelAttributeName = 'skip-links-label';
+    this._emptyAttribute = 'empty';
+
+    this._shadow.innerHTML = skipLinksStyles;
+  }
 
   connectedCallback() {
-    super.connectedCallback()
-    if (document.readyState === "complete" || (document.readyState !== "loading")) {
+    if (
+      document.readyState === 'complete' ||
+      document.readyState !== 'loading'
+    ) {
       this._init();
     } else {
-      document.addEventListener("DOMContentLoaded", this._init);
+      document.addEventListener('DOMContentLoaded', this._init);
     }
   }
 
   _init() {
-    const possibleTargets = document.querySelectorAll(`[${this._skipLinksLabelAttributeName}]`) as NodeListOf<HTMLElement>;
-    possibleTargets.forEach((possibleTarget) => {
+    const possibleTargets: NodeListOf<HTMLElement> = document.querySelectorAll(
+      `[${this._skipLinksLabelAttributeName}]`
+    );
+    possibleTargets.forEach(possibleTarget => {
       const targetId = possibleTarget.id || null;
-      const targetLabel = possibleTarget.getAttribute(this._skipLinksLabelAttributeName) || null;
+      const targetLabel =
+        possibleTarget.getAttribute(this._skipLinksLabelAttributeName) || null;
 
       if (!targetId || !targetLabel) {
-        console.error('SKIP-LINKS: target element does not have all required attributes (id and skip-link-label)');
-        return;
+        console.error(
+          'SKIP-LINKS: target element does not have all required attributes (id and skip-link-label)'
+        );
       } else {
-        const newTarget: Target = {
-          element: possibleTarget,
-          id: targetId,
-          label: targetLabel
-        }
-        this._targets.push(newTarget);
+        this._targets.push(
+          this._createNewTarget(possibleTarget, targetId, targetLabel)
+        );
       }
-    })
+    });
+
+    if (!this._targets || !this._targets.length) {
+      this.setAttribute(this._emptyAttribute, '');
+      return;
+    }
 
     this.setAttribute('role', 'navigation');
-    this._noLinks = !this._targets || !this._targets.length;
+    this._populate();
   }
 
-  render() {
-    if (this._targets.length > 0) {
-      return html`
-        <ul>
-          ${this._targets.map((target) => {
-            return html`
-              <li>
-                <a href="#${target.id}" @click="${this._handleLinkClick}">${target.label}</a>
-              </li>
-            `
-          })}
-        </ul>
-      `
-    }
+  /**
+   * Create a new Target object with all relevant properties
+   *
+   * @param {HTMLElement} possibleTarget
+   * @param {string} targetId
+   * @param {string} targetLabel
+   * @returns {Target} Target
+   */
+  _createNewTarget(
+    possibleTarget: HTMLElement,
+    targetId: string,
+    targetLabel: string
+  ): Target {
+    return {
+      element: possibleTarget,
+      id: targetId,
+      label: targetLabel,
+    };
   }
 
-  _handleLinkClick(event: PointerEvent) {
-    console.log('link click', event);
+  /**
+   * Populate the component with links to the page's targets
+   */
+  _populate() {
+    this._targets.forEach(target => {
+      const targetLink = document.createElement('a');
+      targetLink.href = `#${target.id}`;
+      targetLink.textContent = target.label;
+      this._shadow.appendChild(targetLink);
+    });
   }
 }
