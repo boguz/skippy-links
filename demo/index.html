@@ -7,23 +7,58 @@
       background: #fafafa;
     }
   </style>
+
+  <script src="../dist/src/skip-links.js" type="module"></script>
+
 </head>
 <body>
-  <div id="demo"></div>
+  <skip-links></skip-links>
 
-  <script type="module">
-    import { html, render } from 'lit';
-    import '../dist/src/skip-links.js';
+  <nav>
+    <ul>
+      <li><a href="#one">One</a></li>
+      <li><a href="#two">Two</a></li>
+      <li><a href="#three">Three</a></li>
+      <li><a href="#four">Four</a></li>
+    </ul>
+  </nav>
 
-    const title = 'Hello owc World!';
-    render(
-      html`
-        <skip-links .title=${title}>
-          some light-dom
-        </skip-links>
-      `,
-      document.querySelector('#demo')
-    );
-  </script>
+  <main id="mainContent" skip-links-label="Main content">
+    <h1>This is a test page for the skip links</h1>
+
+    <section id="one">
+      <h2>One</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut enim sapien. Vivamus eu lorem et est pulvinar suscipit. Nunc luctus dictum neque, ut rutrum purus imperdiet in. Mauris eu faucibus sem. Phasellus nec nunc vel leo ultrices viverra. Vestibulum fermentum sollicitudin quam, vel aliquet magna convallis eu. Nam sodales lectus sit amet metus vehicula posuere. Vestibulum sed posuere nisl, convallis dignissim risus. Aliquam laoreet odio odio, vel gravida quam tristique eget. Fusce id ante augue. Duis tempor urna ac purus dictum euismod. Aenean ut enim placerat, dignissim urna eget, imperdiet tortor. Sed a est scelerisque, sodales quam a, lobortis nulla. Etiam neque augue, vehicula quis condimentum in, sodales nec arcu. Aenean quis leo vehicula, facilisis eros et, congue diam.</p>
+    </section>
+
+    <section id="two">
+      <h2>Two</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut enim sapien. Vivamus eu lorem et est pulvinar suscipit. Nunc luctus dictum neque, ut rutrum purus imperdiet in. Mauris eu faucibus sem. Phasellus nec nunc vel leo ultrices viverra. Vestibulum fermentum sollicitudin quam, vel aliquet magna convallis eu. Nam sodales lectus sit amet metus vehicula posuere. Vestibulum sed posuere nisl, convallis dignissim risus. Aliquam laoreet odio odio, vel gravida quam tristique eget. Fusce id ante augue. Duis tempor urna ac purus dictum euismod. Aenean ut enim placerat, dignissim urna eget, imperdiet tortor. Sed a est scelerisque, sodales quam a, lobortis nulla. Etiam neque augue, vehicula quis condimentum in, sodales nec arcu. Aenean quis leo vehicula, facilisis eros et, congue diam.</p>
+      <p><a href="#">Some link</a></p>
+      <p><a href="#">Another link</a></p>
+    </section>
+
+    <section id="three">
+      <h2>Three</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut enim sapien. Vivamus eu lorem et est pulvinar suscipit. Nunc luctus dictum neque, ut rutrum purus imperdiet in. Mauris eu faucibus sem. Phasellus nec nunc vel leo ultrices viverra. Vestibulum fermentum sollicitudin quam, vel aliquet magna convallis eu. Nam sodales lectus sit amet metus vehicula posuere. Vestibulum sed posuere nisl, convallis dignissim risus. Aliquam laoreet odio odio, vel gravida quam tristique eget. Fusce id ante augue. Duis tempor urna ac purus dictum euismod. Aenean ut enim placerat, dignissim urna eget, imperdiet tortor. Sed a est scelerisque, sodales quam a, lobortis nulla. Etiam neque augue, vehicula quis condimentum in, sodales nec arcu. Aenean quis leo vehicula, facilisis eros et, congue diam.</p>
+    </section>
+
+    <section id="four">
+      <h2>Four</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut enim sapien. Vivamus eu lorem et est pulvinar suscipit. Nunc luctus dictum neque, ut rutrum purus imperdiet in. Mauris eu faucibus sem. Phasellus nec nunc vel leo ultrices viverra. Vestibulum fermentum sollicitudin quam, vel aliquet magna convallis eu. Nam sodales lectus sit amet metus vehicula posuere. Vestibulum sed posuere nisl, convallis dignissim risus. Aliquam laoreet odio odio, vel gravida quam tristique eget. Fusce id ante augue. Duis tempor urna ac purus dictum euismod. Aenean ut enim placerat, dignissim urna eget, imperdiet tortor. Sed a est scelerisque, sodales quam a, lobortis nulla. Etiam neque augue, vehicula quis condimentum in, sodales nec arcu. Aenean quis leo vehicula, facilisis eros et, congue diam.</p>
+    </section>
+  </main>
+
+  <aside>
+    <h3>This is an aside</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut enim sapien. Vivamus eu lorem et est pulvinar suscipit. Nunc luctus dictum neque, ut rutrum purus imperdiet in.</p>
+
+    <h2>Form</h2>
+    <form action="#">
+      <label for="search">Search the site:</label>
+      <input type="search" id="search" name="search"skip-links-label="Page search input">
+      <button type="submit">Search</button>
+    </form>
+  </aside>
 </body>
 </html>
