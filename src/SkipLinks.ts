@@ -89,7 +89,28 @@ export class SkipLinks extends HTMLElement {
       const targetLink = document.createElement('a');
       targetLink.href = `#${target.id}`;
       targetLink.textContent = target.label;
+      targetLink.classList.add('skip-links__link');
+
+      targetLink.addEventListener('keydown', event => {
+        if (event.code === 'Space' || event.code === 'enter') {
+          this._handleClick(target.element);
+        }
+      });
+      targetLink.addEventListener('click', () => {
+        this._handleClick(target.element);
+      });
+
       this._shadow.appendChild(targetLink);
     });
+  }
+
+  /**
+   * handle focus when one of the links is clicked
+   *
+   * @param {HTMLElement} targetElement
+   */
+  _handleClick(targetElement: HTMLElement) {
+    this.blur();
+    targetElement.focus();
   }
 }
