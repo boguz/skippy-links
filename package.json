@@ -1,7 +1,7 @@
 {
   "name": "skip-links",
   "version": "0.0.1",
-  "description": "A web component to provide skip links to any page and improve the page's accessibility",
+  "description": "A small and easy to use web component to provide dynamic skip links to any page",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
@@ -9,10 +9,9 @@
     "./skip-links.js": "./dist/src/skip-links.js"
   },
   "scripts": {
-    "analyze": "cem analyze --litelement",
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
-    "build": "tsc && npm run analyze -- --exclude dist",
-    "prepublish": "tsc && npm run analyze -- --exclude dist",
+    "build": "tsc",
+    "prepublish": "tsc",
     "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore",
     "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
     "test": "tsc && wtr --coverage",
@@ -23,7 +22,23 @@
     "url": "git+https://github.com/boguz/skip-links.git"
   },
   "keywords": [
-    "accessibility"
+    "accessibility",
+    "skip link",
+    "skip to content",
+    "skip",
+    "link",
+    "a11y",
+    "web component",
+    "webcomponent",
+    "visual impairments",
+    "screen reader",
+    "tab",
+    "keyboard",
+    "assistive technology",
+    "tab links",
+    "skip-to",
+    "navigation",
+    "native web component"
   ],
   "author": "LuisPato",
   "license": "MIT",
@@ -39,6 +54,8 @@
     "@typescript-eslint/parser": "^4.33.0",
     "@web/dev-server": "^0.1.28",
     "@web/test-runner": "next",
+    "@web/test-runner-chrome": "^0.10.7",
+    "@web/test-runner-playwright": "^0.8.8",
     "concurrently": "^5.3.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
@@ -58,7 +75,9 @@
     "plugins": [
       "@typescript-eslint"
     ],
-    "ignorePatterns": ["/OLD"],
+    "ignorePatterns": [
+      "/OLD"
+    ],
     "rules": {
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": [

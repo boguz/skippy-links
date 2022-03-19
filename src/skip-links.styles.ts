@@ -4,25 +4,25 @@ export const skipLinksStyles = `
             --sl-color-primary: #0000ee;
             --sl-element-height: 4rem;
             
-            border: var(--sl-border, 1px solid var(--sl-color-primary));
-            background-color: var(--sl-background-color, white);
-            position: var(--sl-position, fixed);
-            top: var(--sl-top, calc(var(--sl-element-height) * -1));
-            bottom: var(--sl-bottom, unset);
-            left: var(--sl-left, 0);
-            right: var(--sl-right, 0);
-            width: var(--sl-width, 100%);
-            height: var(--sl-height, var(--sl-element-height));
-            transform: var(--sl-transform, translateY(0));
-            transition: transform var(--sl-transition-speed, .25s);
-            overflow: var(--sl-overflow, hidden);
-            box-sizing: var(--sl-box-sizing, border-box);
-            box-shadow: var(--sl.box-shadow, none);
-            z-index: var(--sl-z-index, 9999);
+            border: 1px solid var(--sl-color-primary);
+            background-color: white;
+            position: fixed;
+            top: calc(var(--sl-element-height) * -1);
+            bottom: unset;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: var(--sl-element-height);
+            transform: translateY(0);
+            transition: transform var(--sl-transition-speed, .25s) ease-in-out;
+            overflow: hidden;
+            box-sizing: border-box;
+            box-shadow: none;
+            z-index: 9999;
         }
         
         :host(:focus-within) {
-            transform: var(--sl-transform-focus-within, translateY(100%));
+            transform: translateY(100%);
         }
         
         .skip-links__link {
@@ -48,6 +48,7 @@ export const skipLinksStyles = `
         .skip-links__link:focus {
             opacity: var(--sl-link-opacity-focus, 1);
             transform: var(--sl-link-transform-focus, translateY(0));
+            color: var(--sl-link-color-focus, var(--sl-color-primary));
         }
         
         @media (hover: hover) {

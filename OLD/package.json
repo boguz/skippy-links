@@ -3,7 +3,15 @@
   "description": "Webcomponent skip-links following open-wc recommendations",
   "license": "MIT",
   "author": "skip-links",
-  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boguz/skip-links"
+  },
+  "bugs": {
+    "url": "https://github.com/boguz/skip-links/issues"
+  },
+  "homepage": "https://github.com/boguz/skip-links#readme",
+  "version": "0.0.1",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
