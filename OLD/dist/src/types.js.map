@@ -1,1 +1,0 @@
-{"version":3,"file":"types.js","sourceRoot":"","sources":["../../src/types.ts"],"names":[],"mappings":"","sourcesContent":["export interface Target {\n  element: HTMLElement;\n  id: string;\n  label: string;\n}\n"]}

@@ -1,1 +1,0 @@
-{"version":3,"file":"skip-links.js","sourceRoot":"","sources":["../../src/skip-links.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,SAAS,EAAE,MAAM,gBAAgB,CAAC;AAE3C,MAAM,CAAC,cAAc,CAAC,MAAM,CAAC,YAAY,EAAE,SAAS,CAAC,CAAC","sourcesContent":["import { SkipLinks } from './SkipLinks.js';\n\nwindow.customElements.define('skip-links', SkipLinks);\n"]}

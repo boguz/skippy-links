@@ -2,7 +2,15 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <title>Skip Links demo</title>
+  <title>&lt;skip-links&gt;</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:wght@300;500&family=VT323&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/atom-one-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
 
   <link rel="stylesheet" href="./demo.css">
   <script src="../dist/src/skip-links.js" type="module"></script>
@@ -10,51 +18,152 @@
 <body>
   <skip-links></skip-links>
 
-  <nav>
-    <ul>
-      <li><a href="#one">One</a></li>
-      <li><a href="#two">Two</a></li>
-      <li><a href="#three">Three</a></li>
-      <li><a href="#four">Four</a></li>
-    </ul>
-  </nav>
+  <div class="topbar">
+    <h3 class="topbar__logo">&lt;skip-links&gt;</h3>
+    <div class="topbar__links">
+      <a href="https://github.com/boguz/skip-links" target="_blank" class="topbar__link topbar__link--github icon icon--github"></a>
+    </div>
+  </div>
 
-  <main id="mainContent" skip-links-label="Main content">
-    <h1>This is a test page for the skip links</h1>
-
-    <section id="one">
-      <h2>One</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut enim sapien. Vivamus eu lorem et est pulvinar suscipit. Nunc luctus dictum neque, ut rutrum purus imperdiet in. Mauris eu faucibus sem. Phasellus nec nunc vel leo ultrices viverra. Vestibulum fermentum sollicitudin quam, vel aliquet magna convallis eu. Nam sodales lectus sit amet metus vehicula posuere. Vestibulum sed posuere nisl, convallis dignissim risus. Aliquam laoreet odio odio, vel gravida quam tristique eget. Fusce id ante augue. Duis tempor urna ac purus dictum euismod. Aenean ut enim placerat, dignissim urna eget, imperdiet tortor. Sed a est scelerisque, sodales quam a, lobortis nulla. Etiam neque augue, vehicula quis condimentum in, sodales nec arcu. Aenean quis leo vehicula, facilisis eros et, congue diam.</p>
+  <main>
+    <section class="section section--light-blue header">
+      <div class="section__content">
+        <h1 class="section__title">&lt;skip-links&gt;</h1>
+        <p class="section__text section__text--center">Skip-links is a small and open-source web component that enables you to easily add skip links to your page, improving accessibility and making it a better place for everyone.</p>
+        <div class="section__buttons">
+          <a href="#gettingStarted" class="button button--primary">Get started</a>
+          <a href="https://github.com/boguz/skip-links" class="button button--outline">Github</a>
+        </div>
+      </div>
     </section>
 
-    <section id="two">
-      <h2>Two</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut enim sapien. Vivamus eu lorem et est pulvinar suscipit. Nunc luctus dictum neque, ut rutrum purus imperdiet in. Mauris eu faucibus sem. Phasellus nec nunc vel leo ultrices viverra. Vestibulum fermentum sollicitudin quam, vel aliquet magna convallis eu. Nam sodales lectus sit amet metus vehicula posuere. Vestibulum sed posuere nisl, convallis dignissim risus. Aliquam laoreet odio odio, vel gravida quam tristique eget. Fusce id ante augue. Duis tempor urna ac purus dictum euismod. Aenean ut enim placerat, dignissim urna eget, imperdiet tortor. Sed a est scelerisque, sodales quam a, lobortis nulla. Etiam neque augue, vehicula quis condimentum in, sodales nec arcu. Aenean quis leo vehicula, facilisis eros et, congue diam.</p>
-      <p><a href="#">Some link</a></p>
-      <p><a href="#">Another link</a></p>
+    <section class="section section--white">
+      <div class="section__content">
+        <h2 class="section__headline">
+          <span class="section__headline-prefix" aria-hidden="true">#</span>
+          Introduction
+        </h2>
+        <p class="section__text">Assistive technology users often have to tab through a long navigation until they get to the main content. This can be confusing and take a lot of time and energy.</p>
+        <p class="section__text">Skip links are links that are placed before any other content and provide a way for assistive technology users to jump to the most important sections of the page, like for instance the main content, or even jump directly to a search input on the page.</p>
+        <p class="section__text">Skip links seem like a minor improvement to the page, but they can make a huge difference for assistive technology users!</p>
+      </div>
     </section>
 
-    <section id="three">
-      <h2>Three</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut enim sapien. Vivamus eu lorem et est pulvinar suscipit. Nunc luctus dictum neque, ut rutrum purus imperdiet in. Mauris eu faucibus sem. Phasellus nec nunc vel leo ultrices viverra. Vestibulum fermentum sollicitudin quam, vel aliquet magna convallis eu. Nam sodales lectus sit amet metus vehicula posuere. Vestibulum sed posuere nisl, convallis dignissim risus. Aliquam laoreet odio odio, vel gravida quam tristique eget. Fusce id ante augue. Duis tempor urna ac purus dictum euismod. Aenean ut enim placerat, dignissim urna eget, imperdiet tortor. Sed a est scelerisque, sodales quam a, lobortis nulla. Etiam neque augue, vehicula quis condimentum in, sodales nec arcu. Aenean quis leo vehicula, facilisis eros et, congue diam.</p>
+    <section id="gettingStarted" class="section section--light-blue">
+      <div class="section__content">
+        <h2 class="section__headline">
+          <span class="section__headline-prefix" aria-hidden="true">#</span>
+          Getting started
+        </h2>
+
+        <h3 class="section__sub-headline">
+          <span class="section__headline-prefix" aria-hidden="true">##</span>
+          1. Install with NPM
+        </h3>
+        <p class="section__text">To install the skip-links npm module, open a terminal window in your project folder and run:</p>
+        <pre><code class="language-bash">npm install skip-links</code></pre>
+
+        <h3 class="section__sub-headline">
+          <span class="section__headline-prefix" aria-hidden="true">##</span>
+          2. Import into your project
+        </h3>
+        <p class="section__text">After installing it you can add it to the head section of you project’s html.</p>
+        <pre><code class="language-html">&lt;script src=“skip-links/skip-links.js” type=“module”&gt;&lt;/script&gt;</code></pre>
+
+        <h3 class="section__sub-headline">
+          <span class="section__headline-prefix" aria-hidden="true">##</span>
+          3. Add to your page
+        </h3>
+        <p class="section__text">Add the skip-links element to your page. Skip links should be the first element on the body section.</p>
+        <pre><code class="language-html">&lt;body&gt;
+    &lt;skip-links&gt;&lt;/skip-links&gt;
+    &lt;!-- Add your content after the &lt;skip-links&gt; element --&gt;
+&lt;/body&gt;</code></pre>
+
+        <h3 class="section__sub-headline">
+          <span class="section__headline-prefix" aria-hidden="true">##</span>
+          4. Add skip-links-label attributes
+        </h3>
+        <p class="section__text">Add the skip-links-label attribute to any element you want to add to the skip-links element and make sure the target element also has an id.</p>
+        <p class="section__text">For instance if you want to add a link to the &lt;main&gt; section with the “Main Content” label:</p>
+        <pre><code class="language-html">&lt;main id=“main” skip-links-label=“Main Content”&gt;
+  &lt;!-- your main content --&gt;
+&lt;/main&gt;</code></pre>
+
+      </div>
     </section>
 
-    <section id="four">
-      <h2>Four</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut enim sapien. Vivamus eu lorem et est pulvinar suscipit. Nunc luctus dictum neque, ut rutrum purus imperdiet in. Mauris eu faucibus sem. Phasellus nec nunc vel leo ultrices viverra. Vestibulum fermentum sollicitudin quam, vel aliquet magna convallis eu. Nam sodales lectus sit amet metus vehicula posuere. Vestibulum sed posuere nisl, convallis dignissim risus. Aliquam laoreet odio odio, vel gravida quam tristique eget. Fusce id ante augue. Duis tempor urna ac purus dictum euismod. Aenean ut enim placerat, dignissim urna eget, imperdiet tortor. Sed a est scelerisque, sodales quam a, lobortis nulla. Etiam neque augue, vehicula quis condimentum in, sodales nec arcu. Aenean quis leo vehicula, facilisis eros et, congue diam.</p>
+    <section class="section section--white">
+      <div class="section__content">
+        <h2 class="section__headline">
+          <span class="section__headline-prefix" aria-hidden="true">#</span>
+          Skip links best practices
+        </h2>
+        <ul class="section__list">
+          <li class="section__list-item">Don’t use more than 3 skip links per page</li>
+          <li class="section__list-item">They should be the first element on the page’s body tag</li>
+          <li class="section__list-item">Use clear labels for each skip link</li>
+          <li class="section__list-item">They should have a prominent design <when></when> active</li>
+          <li class="section__list-item">They are not a replacement for inpage navigation</li>
+        </ul>
+      </div>
     </section>
+
+    <section class="section section--light-blue">
+      <div class="section__content">
+        <h2 class="section__headline">
+          <span class="section__headline-prefix" aria-hidden="true">#</span>
+          Skip links and a11y resources
+        </h2>
+        <ul class="section__list">
+          <li class="section__list-item">
+            <a href="#">The invention of skip links</a>
+          </li>
+          <li class="section__list-item">
+            <a href="#">WebAIM: Skip navigation links</a>
+          </li>
+          <li class="section__list-item">
+            <a href="#">The A11y Project: Use skip navigation links</a>
+          </li>
+          <li class="section__list-item">
+            <a href="#">A11y Guidelines: Skip links best practices</a>
+          </li>
+          <li class="section__list-item">
+            <a href="#">MDN: What is accessibility</a>
+          </li>
+          <li class="section__list-item">
+            <a href="#">W3C: Accessibility</a>
+          </li>
+          <li class="section__list-item">
+            <a href="#">WAI (Web Accessibility Initiative)</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <section class="section section--blue">
+        <div class="section__content">
+          <h2 class="section__headline section__headline--white">
+            <span class="section__headline-prefix" aria-hidden="true">#</span>
+            Get in touch
+          </h2>
+
+          <div class="footer__links">
+            <a href="https://twitter.com/thisdotluis" target="_blank" class="footer__link footer__link--twitter"></a>
+            <a href="https://www.instagram.com/luispaaaaato/" target="_blank" class="footer__link footer__link--instagram"></a>
+            <a href="https://github.com/boguz/skip-links" target="_blank" class="footer__link footer__link--github"></a>
+            <a href="https://www.npmjs.com/package/skip-links" target="_blank" class="footer__link footer__link--npm"></a>
+          </div>
+        </div>
+      </section>
+      <p class="footer__footnote">
+        Made with ❤️ and 🤟 by <a href="https://github.com/boguz" target="_blank" class="footer__footnote-link">boguz</a>
+      </p>
+    </footer>
   </main>
 
-  <aside>
-    <h3>This is an aside</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut enim sapien. Vivamus eu lorem et est pulvinar suscipit. Nunc luctus dictum neque, ut rutrum purus imperdiet in.</p>
+  <script>hljs.highlightAll();</script>
 
-    <h2>Form</h2>
-    <form action="#">
-      <label for="search">Search the site:</label>
-      <input type="search" id="search" name="search"skip-links-label="Page search input">
-      <button type="submit">Search</button>
-    </form>
-  </aside>
 </body>
 </html>
