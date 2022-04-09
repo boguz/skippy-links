@@ -97,7 +97,7 @@ li::before {
     left: 0;
 }
 
-skip-links {
+skippy-links {
     background-color: var(--color-blue-dark);
     border: none;
     outline: none;

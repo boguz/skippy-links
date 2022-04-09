@@ -1,12 +1,12 @@
 {
-  "name": "skip-links",
+  "name": "skippy-links",
   "version": "0.0.1",
   "description": "A small and easy to use web component to provide dynamic skip links to any page",
   "main": "dist/src/index.js",
   "module": "dist/src/index.js",
   "exports": {
     ".": "./dist/src/index.js",
-    "./skip-links.js": "./dist/src/skip-links.js"
+    "./skippy-links.js": "./dist/src/skippy-links.js"
   },
   "scripts": {
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/boguz/skip-links.git"
+    "url": "git+https://github.com/boguz/skippy-links.git"
   },
   "keywords": [
     "accessibility",
@@ -28,6 +28,8 @@
     "skip",
     "link",
     "a11y",
+    "skippy-links",
+    "skippy",
     "web component",
     "webcomponent",
     "visual impairments",
@@ -43,9 +45,9 @@
   "author": "LuisPato",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/boguz/skip-links/issues"
+    "url": "https://github.com/boguz/skippy-links/issues"
   },
-  "homepage": "https://github.com/boguz/skip-links#readme",
+  "homepage": "https://github.com/boguz/skippy-links#readme",
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@open-wc/eslint-config": "^4.3.0",
@@ -75,9 +77,7 @@
     "plugins": [
       "@typescript-eslint"
     ],
-    "ignorePatterns": [
-      "/OLD"
-    ],
+    "ignorePatterns": [],
     "rules": {
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": [

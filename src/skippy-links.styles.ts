@@ -1,4 +1,4 @@
-export const skipLinksStyles = `
+export const skippyLinksStyles = `
     <style>        
         :host {
             --sl-color-primary: #0000ee;
@@ -25,7 +25,7 @@ export const skipLinksStyles = `
             transform: translateY(100%);
         }
         
-        .skip-links__link {
+        .skippy-links__link {
             position: var(--sl-link-position, absolute);
             top: var(--sl-link-top, 0);
             bottom: var(--sl-link-bottom, 0);
@@ -45,14 +45,14 @@ export const skipLinksStyles = `
             box-sizing: var(--sl-link-box-sizing, border-box);
         }
         
-        .skip-links__link:focus {
+        .skippy-links__link:focus {
             opacity: var(--sl-link-opacity-focus, 1);
             transform: var(--sl-link-transform-focus, translateY(0));
             color: var(--sl-link-color-focus, var(--sl-color-primary));
         }
         
         @media (hover: hover) {
-            .skip-links__link:hover {
+            .skippy-links__link:hover {
                 opacity: var(--sl-link-opacity-hover, 1);
                 transform: var(--sl-link-transform-hover, translateY(0));
                 color: var(--sl-link-color-hover, var(--sl-color-primary));

@@ -1,6 +1,6 @@
 # 1. How to contribute
 
-1. The easiest way to contribute it to [report any bugs](https://github.com/boguz/skip-links/issues) you may find.
+1. The easiest way to contribute it to [report any bugs](https://github.com/boguz/skippy-links/issues) you may find.
 
 2. If you want to actively contribute to the development of this project I would also be happy. Just clone the project, create a new branch, make your changes and create a pull request!  ✨
 
@@ -50,4 +50,4 @@ If you customize the configuration a lot, you can consider moving them to indivi
 npm start
 ```
 
-To run a local development server that serves the basic demo located in `demo/index.html`
+To run a local development server that serves the basic demo located in `docs/index.html`

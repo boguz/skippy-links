@@ -1,1 +1,1 @@
-export { SkipLinks } from './SkipLinks.js';
+export { SkippyLinks } from './SkippyLinks.js';

@@ -2,7 +2,10 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
-  <title>&lt;skip-links&gt;</title>
+  <title>&lt;skippy-links&gt;</title>
+  <meta name="description" content="skippy-links is a small and easy to use web component to provide dynamic skip links to any page">
+  <meta name="keywords" content="skip-links, accessibility, web-components, npm, github, package, open-source, a11y, assistive technologies">
+  <meta name="author" content="LuisPato">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,13 +16,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
 
   <link rel="stylesheet" href="./demo.css">
-  <script src="../dist/src/skip-links.js" type="module"></script>
+  <script src="../dist/src/skippy-links.js" type="module"></script>
 </head>
 <body>
-  <skip-links></skip-links>
+  <skippy-links></skippy-links>
 
   <div class="topbar">
-    <h3 class="topbar__logo">&lt;skip-links&gt;</h3>
+    <h3 class="topbar__logo">&lt;skippy-links&gt;</h3>
     <div class="topbar__links">
       <a href="https://github.com/boguz/skip-links" target="_blank" class="topbar__link topbar__link--github icon icon--github"></a>
     </div>
@@ -28,11 +31,11 @@
   <main>
     <section class="section section--light-blue header">
       <div class="section__content">
-        <h1 class="section__title">&lt;skip-links&gt;</h1>
-        <p class="section__text section__text--center">Skip-links is a small and open-source web component that enables you to easily add skip links to your page, improving accessibility and making it a better place for everyone.</p>
+        <h1 class="section__title">&lt;skippy-links&gt;</h1>
+        <p class="section__text section__text--center">Skippy-links is a small and open-source web component that enables you to easily add skip links to your page, improving accessibility and making it a better place for everyone.</p>
         <div class="section__buttons">
           <a href="#gettingStarted" class="button button--primary">Get started</a>
-          <a href="https://github.com/boguz/skip-links" class="button button--outline">Github</a>
+          <a href="https://github.com/boguz/skippy-links" class="button button--outline">Github</a>
         </div>
       </div>
     </section>
@@ -49,7 +52,7 @@
       </div>
     </section>
 
-    <section id="gettingStarted" class="section section--light-blue" skip-links-label="Getting Started">
+    <section id="gettingStarted" class="section section--light-blue" skippy-links-label="Getting Started">
       <div class="section__content">
         <h2 class="section__headline">
           <span class="section__headline-prefix" aria-hidden="true">#</span>
@@ -61,14 +64,14 @@
           1. Install with NPM
         </h3>
         <p class="section__text">To install the skip-links npm module, open a terminal window in your project folder and run:</p>
-        <pre><code class="language-bash">npm install skip-links</code></pre>
+        <pre><code class="language-bash">npm install skippy-links</code></pre>
 
         <h3 class="section__sub-headline">
           <span class="section__headline-prefix" aria-hidden="true">##</span>
           2. Import into your project
         </h3>
         <p class="section__text">After installing it you can add it to the head section of you project’s html.</p>
-        <pre><code class="language-html">&lt;script src=“skip-links/skip-links.js” type=“module”&gt;&lt;/script&gt;</code></pre>
+        <pre><code class="language-html">&lt;script src=“skippy-links/skippy-links.js” type=“module”&gt;&lt;/script&gt;</code></pre>
 
         <h3 class="section__sub-headline">
           <span class="section__headline-prefix" aria-hidden="true">##</span>
@@ -76,17 +79,17 @@
         </h3>
         <p class="section__text">Add the skip-links element to your page. Skip links should be the first element on the body section.</p>
         <pre><code class="language-html">&lt;body&gt;
-    &lt;skip-links&gt;&lt;/skip-links&gt;
+    &lt;skippy-links&gt;&lt;/skippy-links&gt;
     &lt;!-- Add your content after the &lt;skip-links&gt; element --&gt;
 &lt;/body&gt;</code></pre>
 
         <h3 class="section__sub-headline">
           <span class="section__headline-prefix" aria-hidden="true">##</span>
-          4. Add skip-links-label attributes
+          4. Add skippy-links-label attributes
         </h3>
-        <p class="section__text">Add the skip-links-label attribute to any element you want to add to the skip-links element and make sure the target element also has an id.</p>
+        <p class="section__text">Add the skippy-links-label attribute to any element you want to add to the skip-links element and make sure the target element also has an id.</p>
         <p class="section__text">For instance if you want to add a link to the &lt;main&gt; section with the “Main Content” label:</p>
-        <pre><code class="language-html">&lt;main id=“main” skip-links-label=“Main Content”&gt;
+        <pre><code class="language-html">&lt;main id=“main” skippy-links-label=“Main Content”&gt;
   &lt;!-- your main content --&gt;
 &lt;/main&gt;</code></pre>
 
@@ -142,7 +145,7 @@
     </section>
 
     <footer class="footer">
-      <section id="getInTouch" class="section section--blue" skip-links-label="Get in touch">
+      <section id="getInTouch" class="section section--blue" skippy-links-label="Get in touch">
         <div class="section__content">
           <h2 class="section__headline section__headline--white">
             <span class="section__headline-prefix" aria-hidden="true">#</span>
@@ -152,8 +155,8 @@
           <div class="footer__links">
             <a href="https://twitter.com/thisdotluis" target="_blank" class="footer__link footer__link--twitter"></a>
             <a href="https://www.instagram.com/luispaaaaato/" target="_blank" class="footer__link footer__link--instagram"></a>
-            <a href="https://github.com/boguz/skip-links" target="_blank" class="footer__link footer__link--github"></a>
-            <a href="https://www.npmjs.com/package/skip-links" target="_blank" class="footer__link footer__link--npm"></a>
+            <a href="https://github.com/boguz/skippy-links" target="_blank" class="footer__link footer__link--github"></a>
+            <a href="https://www.npmjs.com/package/skippy-links" target="_blank" class="footer__link footer__link--npm"></a>
           </div>
         </div>
       </section>

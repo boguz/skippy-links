@@ -1,12 +1,12 @@
 import { Target } from './types.js';
-import { skipLinksStyles } from './skip-links.styles.js';
+import { skippyLinksStyles } from './skippy-links.styles.js';
 
-export class SkipLinks extends HTMLElement {
+export class SkippyLinks extends HTMLElement {
   private _targets: Target[];
 
   private _shadow: ShadowRoot;
 
-  private readonly _skipLinksLabelAttributeName: string;
+  private readonly _skippyLinksLabelAttributeName: string;
 
   private readonly _emptyAttribute: string;
 
@@ -15,10 +15,10 @@ export class SkipLinks extends HTMLElement {
 
     this._targets = [];
     this._shadow = this.attachShadow({ mode: 'open' });
-    this._skipLinksLabelAttributeName = 'skip-links-label';
+    this._skippyLinksLabelAttributeName = 'skippy-links-label';
     this._emptyAttribute = 'empty';
 
-    this._shadow.innerHTML = skipLinksStyles;
+    this._shadow.innerHTML = skippyLinksStyles;
   }
 
   connectedCallback() {
@@ -34,16 +34,17 @@ export class SkipLinks extends HTMLElement {
 
   _init() {
     const possibleTargets: NodeListOf<HTMLElement> = document.querySelectorAll(
-      `[${this._skipLinksLabelAttributeName}]`
+      `[${this._skippyLinksLabelAttributeName}]`
     );
     possibleTargets.forEach(possibleTarget => {
       const targetId = possibleTarget.id || null;
       const targetLabel =
-        possibleTarget.getAttribute(this._skipLinksLabelAttributeName) || null;
+        possibleTarget.getAttribute(this._skippyLinksLabelAttributeName) ||
+        null;
 
       if (!targetId || !targetLabel) {
         console.error(
-          'SKIP-LINKS: target element does not have all required attributes (id and skip-link-label)'
+          'SKIPPY-LINKS: target element does not have all required attributes (id and skippy-link-label)'
         );
       } else {
         this._targets.push(
@@ -89,7 +90,7 @@ export class SkipLinks extends HTMLElement {
       const targetLink = document.createElement('a');
       targetLink.href = `#${target.id}`;
       targetLink.textContent = target.label;
-      targetLink.classList.add('skip-links__link');
+      targetLink.classList.add('skippy-links__link');
 
       targetLink.addEventListener('keydown', event => {
         if (event.code === 'Space' || event.code === 'enter') {
