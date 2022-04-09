@@ -2,6 +2,7 @@
 
 `<skippy-links>` is a small and easy to use web component to provide dynamic skip links to any page, thus improving the website's accessibility
 
+Read the official docs [here](https://boguz.github.io/skippy-links/).
 
 ## TOC
 1. What are skip links and why are they important
