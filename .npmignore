@@ -1,0 +1,6 @@
+/design
+/node_modules
+tsconfig.json
+tsconfig.tsbuildinfo
+web-dev-server.config-mjs
+web-test-runner.config-mjs
