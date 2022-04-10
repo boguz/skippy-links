@@ -1,12 +1,12 @@
 {
   "name": "skippy-links",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small and easy to use web component to provide dynamic skip links to any page",
-  "main": "dist/src/index.js",
-  "module": "dist/src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "exports": {
-    ".": "./dist/src/index.js",
-    "./skippy-links.js": "./dist/src/skippy-links.js"
+    ".": "./dist/index.js",
+    "./skippy-links.js": "./dist/skippy-links.js"
   },
   "scripts": {
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",

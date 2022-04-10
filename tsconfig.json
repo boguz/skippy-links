@@ -13,9 +13,9 @@
     "outDir": "dist",
     "sourceMap": true,
     "inlineSources": true,
-    "rootDir": "./",
+    "rootDir": "./src",
     "declaration": true,
     "incremental": true
   },
-  "include": ["**/*.ts"]
+  "include": ["src/**/*.ts"]
 }

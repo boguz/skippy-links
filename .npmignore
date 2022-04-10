@@ -1,6 +1,7 @@
 .idea
 /design
 /node_modules
+/test
 tsconfig.json
 tsconfig.tsbuildinfo
 web-dev-server.config.mjs
