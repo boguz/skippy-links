@@ -2,6 +2,8 @@
 /design
 /node_modules
 /test
+/docs
+/src
 tsconfig.json
 tsconfig.tsbuildinfo
 web-dev-server.config.mjs

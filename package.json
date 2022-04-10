@@ -1,6 +1,6 @@
 {
   "name": "skippy-links",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A small and easy to use web component to provide dynamic skip links to any page",
   "main": "dist/index.js",
   "module": "dist/index.js",
