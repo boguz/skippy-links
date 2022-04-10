@@ -4,6 +4,7 @@
 /test
 /docs
 /src
+CONTRIBUTING.md
 tsconfig.json
 tsconfig.tsbuildinfo
 web-dev-server.config.mjs
