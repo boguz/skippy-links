@@ -32,7 +32,7 @@ npm i skippy-links
 
 ### 2.2 Import into your project
 ```html
-<script src="skippy-links/skippy-links.js" type="module"></script>
+<script src="node_modules/skippy-links/dist/src/skippy-links.js" type="module"></script>
 ```
 
 ### 2.3 Add to the page
